@@ -66,6 +66,7 @@ vertical-align: top;}
 .pubtitle{font-weight: bold;}
 .pubbooktitle{font-style: italic;}
 .sectiongray{ background-color: rgb(247, 247, 247)}
+.sectionwhite{ background-color: rgb(254, 254, 254)}
 
 > .navbar-fixed-top {
 > 	position: fixed; top = -50px;
