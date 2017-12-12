@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation bar and jumbotron -->
+    <div id="nav-jumbo-placeholder"> </div>
+
+    <div class="container">
+      <!-- <p>The challenge consists of two tasks:</p>
+      <ul>
+        <li>Text localization: Localize text in images.</li>
+        <li>End-to-End Recognition: Localize and recognize text in images.</li>
+      </ul> -->
+
+      <h2>Task I - Text Localization</h2>
+      <p>The aim of Task I is to localize text lines in test images. Participants can train their detectors on the provided <a href="dataset.html">training set</a>. Extra data is allowed, but must be reported during submission. Fine-tuning models that are pretrained on <a href="http://image-net.org/">ImageNet</a> is also allowed.</p>
+
+      <h3>Submission</h3>
+      <p>For each image in the test set, a UTF-8 text file should be provided in the following naming convention:</p>
+      <pre><code>task1_&lt;image_name&gt;.txt</code></pre>
+      <p>Each line of the text file is a detected text line, made up by the coordinates of a quadrilateral and a confidence score. Vertices are in the clockwise order.</p>
+      <pre><code>&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;,&lt;score&gt;
+&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;,&lt;score&gt;
+...</code></pre>
+      <p>Participants need to submit a single zip file that contains all the result files.</p>
+
+      <h3>Evaluation Protocol</h3>
+      <p>The evaluation protocol follows <a href="http://host.robots.ox.ac.uk/pascal/VOC/">PASCAL VOC</a>, which adopts mean Average Precision (mAP) as the primary metric. The original mAP is defined on axis-aligned boxes, while text in our dataset may be multi-oriented. Therefore, we will calculate intersection-over-union (IoU) over polygons rather than axis-aligned rectangles.</p>
+      <p>In our evaluation protocol, a detected polygon is marked as true positive if 1) IoU with a ground truth polygon is over 0.5 and 2) the ground truth polygon has not been matched to another detection yet. The rest of our protocol follows the PASCAL VOC protocol. We will calculate both Average Precision and Average Recall, and take AP as the primary metric. Note that this metric is the same as mAP, since we only have one category.</p>
+
+      <h2>Task II - End-to-End Recognition</h2>
+      <p>The aim of Taks II is to localize and recognize text lines in test images. Participants can train their detectors on the provided <a href="dataset.html">training set</a>. Extra data is allowed, but must be reported during submission. Fine-tuning models that are pretrained on <a href="http://image-net.org/">ImageNet</a> is also allowed.</p>
+
+      <h3>Submission</h3>
+      <p>For each image in the test set, a UTF-8 text file should be provided in the following naming convention:</p>
+      <pre><code>task2_&lt;image_name&gt;.txt</code></pre>
+      <p>Each line of the text file contains the position and recognized text of a text line. File format:</p>
+      <pre><code>&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;,&lt;recognized_text&gt;
+&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;,&lt;recognized_text&gt;
+...</code></pre>
+      <p>Participants need to submit a single zip file that contains all the result files.</p>
+
+      <h3>Evaluation Protocol</h3>
+      <p>First, every detected quadrilateral is matched to a groundtruth quadrilateral that has the maximum IoU, or <code>null</code> if none has IoU over 0.5. If multiple detections are matched with the same ground truth, only the one with the maximum IoU will be kept and the rest are matched to <code>null</code>.</p>
+      <p>Then, the edit distances between all matching pairs are calculated. If a detection is matched to <code>null</code>, then an empty string will be taken as the groundtruth text. The edit distances are summarized and divided by the number of the test images. The resulting average edit distance is taken as the primary metric.</p>
+
+
+      <!-- Footer placeholder -->
+      <div id="footer"> </div>
+    </div>
+  </body>
+</html>

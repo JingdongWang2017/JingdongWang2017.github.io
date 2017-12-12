@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation bar and jumbotron -->
+    <div id="nav-jumbo-placeholder"> </div>
+
+    <div class="jumbotron">
+        <div class="container">
+        <div class="text-center">
+            <h1 style=color:aliceblue>Mars</h1>
+            <p style=color:aliceblue>A large scale video dataset for person re-identification</p>
+            <!-- <p><a class="btn btn-primary btn-lg" href="registration.html" role="button">Register Now</a></p> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <h3>Mars Dataset</h3>
+      <p>MARS (Motion Analysis and Re-identification Set) is an extension of the Market-1501 dataset [43]. During collection, we placed six near-synchronized cameras in the campus of Tsinghua university. There were Five 1,080*1920 HD cameras and one 640*480 SD camera. MARS consists of 1,261 different pedestrians whom are captured by at least 2 cameras.</p>
+      <p>Given a query tracklet, MARS aims to retrieve tracklets that contain the same ID. </p>
+      <h3>Download</h3>
+      <p>The dataset package is provided on  <a href="https://drive.google.com/drive/folders/0B6tjyrV1YrHeMVV2UFFXQld6X1E"><font color="blue">GoogleDrive</font></a>, or <a href="https://pan.baidu.com/s/1hswMDfu#list/path=%2F"><font color="blue">Baidu Disk </font></a>. The package contains two folders: </p>
+      <ul>
+        <li><b>bbox_train.</b> There are 509,914 bboxes in this folder, belonging to 625 IDs and 8,298 tracklets.</li>
+        <li><b>bbox_test.</b> There are 681.089 bboxes in this folder (gallery+query), belonging to 636 IDs and 12,180 tracklets. </li>
+      </ul>
+      <h3>Naming Rules of the bboxes</h3>
+      <ul>
+        <li>In bbox "0065C1T0002F0016.jpg", "0065" is the ID of the pedestrian. "C1" denotes the first camera (there are totally 6 cameras). "T0002" means the 2th tracklet. "F016" is the 16th frame within this tracklet. For the tracklets, their names are accumulated for each ID; but for frames, they start from "F001" in each tracklet.</li>
+        <li>Using the same convention as Market-1501, ID = "00-1" means junk images which do not affect retrieval accuracy; ID = "0000" means distractors, which negatively affect retrieval accuracy. </li>
+      </ul>
+      <h2>Example Images</h2>
+      <div class="text-center" id="example-images">
+        <img class="img-responsive" alt="Example images" src="./image/mars.jpg">
+      </div>
+
+      <!-- Footer placeholder -->
+      <div id="footer"> </div>
+    </div>
+  </body>
+</html>

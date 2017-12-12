@@ -1,0 +1,145 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="nav-jumbo-placeholder"> </div>
+    <div class="jumbotron">
+            <div class="container">
+            <div class="text-center">
+                    <h1 style=color:aliceblue>Mars</h1>
+                    <p style=color:aliceblue>The leaderboard</p>
+                <!-- <p><a class="btn btn-primary btn-lg" href="registration.html" role="button">Register Now</a></p> -->
+            </div>
+            </div>
+        </div>
+    <div style="width: 1200px; margin:0 auto;">
+      <h3>Baseline</h3>
+      <table id="mars" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <tbody><tr>
+            <td width="35%" rowspan="2"><strong>Paper Name</strong></td> <td width="30%" style="text-align: center" colspan="4"><strong>MARS</strong></td> <td width="30%" style="text-align: center" rowspan="2"><strong>Notes</strong></td>
+            </tr>
+            <tr>
+                <td>rank-1</td><td>rank-5</td><td>rank-20</td><td>mAP</td>
+            </tr>
+            <tr>
+            <td rowspan="7">MARS: A Video Benchmark for Large-Scale Person Re-identification<a href="#ref">[1]</a></td> <td>2.6</td><td>6.4</td><td>12.4</td><td>0.8</td> <td rowspan="1">HOG3D<a href="#ref8">[11]</a> + kissme<a href="#ref9">[12]</a>, Euclidean distance, single query</td>
+            </tr>
+
+            <tr>
+                <td>1.2</td><td>2.8</td><td>7.4</td><td>0.4</td><td rowspan="1">GEI<a href="#ref10">[13]</a> + kissme<a href="#ref9">[12]</a>, single query. </td>
+            </tr>
+            <tr>
+                <td>18.6</td><td>33.0</td><td>45.9</td><td>8.0</td><td rowspan="1">HistLBP<a href="#ref11">[14]</a> + XQDA<a href="#ref12">[15]</a>, single query</td>
+            </tr>
+            <tr>
+                <td>30.6</td><td>46.2</td><td>59.2</td><td>15.5</td><td rowspan="1">BoW<a href="#ref13">[16]</a> + kissme<a href="#ref9">[12]</a>, single query</td>
+            </tr>
+            <tr>
+                <td>60.0</td><td>77.9</td><td>87.9</td><td>42.4</td><td rowspan="1">IDE, average pooling, Euclidean distance, single  query</td>
+            </tr>
+            <tr>
+                <td>65.0</td><td>81.1</td><td>88.9</td><td>45.6</td><td rowspan="1">IDE + kissme, max pooling, Euclidean distance, single query</td>
+            </tr>
+            <tr>
+                <td>68.3</td><td>82.6</td><td>89.4</td><td>49.3</td><td rowspan="1">IDE + kissme, max pooling, Euclidean distance, multiple query</td>
+            </tr>
+        </tbody>
+      </table>
+        <h3>Results</h3>
+        <table id="mars" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td width="35%" rowspan="2"><strong>Paper Name</strong></td> <td width="30%" style="text-align: center" colspan="4"><strong>MARS</strong></td> <td width="30%" style="text-align: center" rowspan="2"><strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td>rank-1</td><td>rank-5</td><td>rank-20</td><td>mAP</td>
+                </tr>
+                <tr>
+            <tr>
+            <td>Learning Compact Appearance Representation for Video-based Person Re-Identification<a href="#ref">[2]</a></td> <td>55.5</td> <td>70.2</td> <td>80.2</td><td>-</td> <td>A frame selection step is used before feature pooling</td>
+            </tr>	
+            <tr>
+            <td>Multi-Target Tracking in Multiple Non-Overlapping Cameras using Constrained Dominant Sets<a href="#ref">[3]</a></td> <td>68.22</td> <td>-</td> <td>-</td><td>-</td> <td>The constrained dominant sets clustering (CDSC) method is proposed.</td>
+            </tr>	
+            <tr>
+            <td rowspan="2">Re-ranking Person Re-identification with k-reciprocal Encoding<a href="#ref1">[4]</a></td> <td>67.78</td> <td>-</td> <td>-</td><td>57.98</td><td>IDE (CaffeNet) + re-ranking, single query.  </td>
+            </tr>
+            <tr>
+            <td>73.94</td> <td>-</td> <td>-</td><td>68.45</td><td> IDE (ResNet50) + re-ranking, single query. </td>
+            </tr>
+
+            <tr>
+            <td rowspan="2">Learning Deep Context-aware Features over Body and Latent Parts for Person Re-identification<a href="#ref2">[5]</a></td> <td>71.77</td> <td>86.57</td> <td>93.08</td><td>56.05</td><td> Using the fine-tuned TriNet and Euclidean distance, single query. </td>
+            </tr>
+            <tr>
+                <td>83.03</td> <td>93.69</td> <td>97.63</td><td>66.43</td><td>TriNet + re-ranking<a href="#ref14">[17]</a></td>
+            </tr>
+
+            <tr>
+            <td>See the forest for the trees: Joint spatial and temporal recurrent neural networks for video-based person re-identification<a href="#ref3">[6]</a></td> <td>70.6</td> <td>90.0</td> <td>97.6</td><td>50.7</td> <td>Single query. Handles both spatial and temporal information.</td>
+            </tr>
+
+            <tr>
+            <td>Quality Aware Network for Set to Set Recognition<a href="#ref4">[7]</a></td> <td>73.74</td> <td>84.90</td> <td>91.62</td><td>51.70</td> <td>P-QAN (googlenet), single query. Numbers are provided by the authors, not reported in the paper</td>
+            </tr>
+            <tr>
+            <td rowspan="2">In Defense of the Triplet Loss for Person Re-Identification<a href="#ref5">[8]</a></td> <td>79.80</td> <td>91.36</td> <td>-</td><td>67.70</td><td> Using the fine-tuned TriNet and Euclidean distance, single query. </td>
+            </tr>
+            <tr>
+                <td>81.21</td> <td>90.76</td> <td>-</td><td>77.43</td><td>TriNet + re-ranking<a href="#ref14">[17]</a></td>
+            </tr>
+        </tbody></table>
+        <h3>Use the dataset for training, but do not report results/using a different evaluation protocol</h3>
+        <table id="mars" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td width="35%" rowspan="2"><strong>Paper Name</strong></td> <td width="30%" style="text-align: center" colspan="4"><strong>MARS</strong></td> <td width="30%" style="text-align: center" rowspan="2"><strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td>rank-1</td><td>rank-5</td><td>rank-20</td><td>mAP</td>
+                </tr>
+                <tr>
+            <tr>
+            <td>Simple Online and Realtime Tracking with a Deep Association Metric<a href="#ref6">[9]</a></td> <td>-</td> <td>-</td> <td>-</td><td>-</td><td>The CNN model is trained on MARS </td>
+            </tr>
+            <tr>
+            <td>Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification<a href="#ref7">[10]</a></td> <td>44</td> <td>70</td> <td>81</td><td>-</td> <td>Single query. Joint Spatial and Temporal Attention Pooling Network. The evaluation protocol is different from the original one.</td>
+            </tr>	
+
+        </tbody></table>
+        <h2 id="ref">References</h2>
+        <ul style="list-style-type:none">
+            <li id="ref1">[1] "MARS: A Video Benchmark for Large-Scale Person Re-identification", L. Zheng, Z. Bie, Y. Sun, J. Wang, C. Su, S. Wang, and Q. Tian, ECCV 2016.</li>
+            <li id="ref2">[2] "Learning Compact Appearance Representation for Video-based Person Re-Identification", Wei Zhang, Shengnan Hu, Kan Liu, Arxiv 2017.</li>
+            <li id="ref3">[3] "Multi-Target Tracking in Multiple Non-Overlapping Cameras using Constrained Dominant Sets", Yonatan Tariku Tesfaye, Eyasu Zemene, Andrea Prati, Marcello Pelillo, and Mubarak Shah, Arxiv 2017.</li>
+            <li id="ref4">[4] "Re-ranking Person Re-identification with k-reciprocal Encoding", Z. Zhong, L. Zheng, D. Cao, and S. Li, CVPR 2017.</li>
+            <li id="ref5">[5] "Learning Deep Context-aware Features over Body and Latent Parts for Person Re-identification", Dangwei Li, Xiaotang Chen, Zhang Zhang, Kaiqi Huang, CVPR 2017.</li>
+            <li id="ref6">[6] "See the forest for the trees: Joint spatial and temporal recurrent neural networks for video-based person re-identification", Zhen Zhou, Yan Huang, Wei Wang, Liang Wang, and Tieniu Tan, CVPR 2017.</li>
+            <li id="ref7">[7] "Quality Aware Network for Set to Set Recognition", Yu Liu, Junjie Yan, Wanli Ouyang, CVPR 2017.</li>
+            <li id="ref8">[8] "In Defense of the Triplet Loss for Person Re-Identification", Alexander Hermans, Lucas Beyer and Bastian Leibe, Arxiv 2017.</li>
+            <li id="ref9">[9] "Simple Online and Realtime Tracking with a Deep Association Metric", Nicolai Wojke, Alex Bewley, Dietrich Paulus, ArXiv 2017.</li>
+            <li id="ref10">[10] "Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification", Shuangjie Xu, Yu Cheng, Kang Gu, Yang Yang, Shiyu Chang, Pan Zhou, ICCV 2017.</li>
+            <li id="ref11">[11] "A spatio-temporal descriptor based on 3d gradients", Alexander Klaser, Marcin Marszalek, Cordelia Schmid, BMCV 2008. </li>
+            <li id="ref12">[12] "Large scale metric learning from equivalence constraints", Martin Köstinger, Martin Hirzer, Paul Wohlhart, Peter M. Roth, Horst Bischof, CVPR 2012</li>
+            <li id="ref13">[13] "Individual recognition using gait energy image", Ju Man, Bir Bhanu, TPAMI 2006</li>
+            <li id="ref14">[14] "Person reidentification using kernel-based metric learning methods", F. Xiong, M. Gou, O. Camps, and M. Sznaier, ECCV 2014.</li>
+            <li id="ref15">[15] "Person re-identification by local maximal occurrence representation and metric learning", S. Liao, Y. Hu, X. Zhu, and S. Z. Li, CVPR 2015.</li>
+            <li id="ref16">[16] "Scalable person re-identification: a benchmark", Liang Zheng, Liyue Shen, Lu Tian, Shengjin Wang, Jingdong Wang, Qi Tian, ICCV 2015.</li>
+            <li id="ref17">[17] "Re-ranking Person Re-identification with k-reciprocal Encoding", Z. Zhong, L. Zheng, D. Cao, and S. Li, CVPR 2017.</li>
+
+        </ul>
+    	<div id="footer"> </div>
+    </div>
+
+  </body>
+</html>

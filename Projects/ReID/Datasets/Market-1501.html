@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation bar and jumbotron -->
+    <div id="nav-jumbo-placeholder"> </div>
+    <div class="jumbotron">
+            <div class="container">
+            <div class="text-center">
+                <h1 style=color:aliceblue>Market-1501</h1>
+                <p style=color:aliceblue>A large scale image dataset for person re-identification </p>
+            </div>
+            </div>
+    </div>
+
+
+    <div class="container">
+      <h3>Description</h3>
+      <p>The Market-1501 dataset is collected in front of a supermarket at Tsinghua University. 
+      A total of six cameras are used, including 5 high-resolution cameras and one low-resolution camera. 
+      Overlap exists among different cameras. 
+      Overall, this dataset contains 32,668 annotated bounding boxes of 1,501 identities. In this open system, images of each identity are captured by at most six cameras. We make sure that each annotated identity is present in at least two cameras, so that cross-camera search can be performed. There are three featured properties:</p>
+      <ul>
+          <li>Our dataset employes Deformable Part Model (DPM) as pedestrian detector. </li>
+          <li>In addition to the true positive bounding boxes, we also provde false alarm detection results. </li>
+          <li>Each identify may have multiple images under each camera. During cross-camera search, there are multiple queries and multiple ground truths for each identity. </li>
+      </ul>
+      <p>The Market-1501 dataset is annotated using the following rules. For each detected bounding box to be annotated, we manually draw a ground truth bounding box that contains the pedestrian. Then, for the detected and hand-drawn bounding boxes, we calculate the ratio of the overlapping area to the union area. If the ratio is larger than 50%, the DPM bounding box is marked as "good"; if the ratio is smaller than 20%, the bounding boxe is marked as "distractor"; otherwise, it is marked as "junk", meaning that this image is of zero influence to the re-identification accuracy. </p>
+      
+      <h3>Download</h3>
+      <p>The dataset package is provided on <a href="https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view?usp=sharing"><font color="blue">GoogleDrive</font></a>, or  <a href="http://pan.baidu.com/s/1ntIi2Op"><font color="blue">Baidu Disk</font></a>. The package contains five folders: </p>
+      <ul>
+          <li><b>bounding_box_test.</b> There are 19,732 images in this folder used for testing.</li>
+          <li><b>bounding_box_train.</b> There are 12,936 images in this folder used for training.</li>
+          <li><b>query.</b> There are 750 identities. We randomly select one query image for each camera. So the maximum number of query images is 6 for an identity. In total, there are 3,368 query images in this folder.</li>
+          <li><b>gt_query.</b> This folder contains the ground truth annotations. For each query, the relevant images are marked as "good" or "junk". "junk" has zero impact on search accuracy. "junk" images also include those in the same camera with the query.</li>
+          <li><b>gt_bbox.</b> We also provide the hand-drawn bounding boxes. They are used to judge whether a DPM bounding box is good. </li>
+        </ul>
+        <h3>Naming Rules of the bboxes</h3>
+        <ul>
+        <li>In bbox "0001_c1s1_001051_00.jpg", "c1" is the first camera (there are totally 6 cameras).</li>
+        <li>"s1" is sequence 1 of camera 1. Here, a sequence was defined automatically by the camera. We suppose that the camera cannot store a whole video that is quite large, so it splits the video into equally large sequences. Two sequences, namely, "c1s1" and "c2s1" do not happen exactly at the same time. This is mainly because the starting time of the 6 cameras are not exactly the same (it takes time to turn on them). But, "c1s1" and "c2s1" are roughly at the same time period.</li>
+        <li>"001051" is the 1051th frame in the sequence "c1s1". The frame rate is 25 frames per sec. </li>
+        <li>As with the last two digits, remember we use the DPM detector. Then, for identity "0001", there may be multiple detected bounding boxes in the frame "c1s1_001051". In other words, a pedestrian in the image may have several bboxes by DPM. So, "00" means that this bounding box is the first one among the several.</li>
+        </ul>
+        <h3>Example Images</h3>
+        <div class="text-center" id="example-images">
+          <img class="img-responsive" alt="Example images" src="./image/market.jpg">
+        </div>
+        <h3>Market-1501+500k</h3>
+        <p>We have released the 500k bboxes as distractors. Please download it from  <a href="http://pan.baidu.com/s/1qWEcLFQ"><font color="blue">BaiduDisk</font></a> or <a href="https://drive.google.com/file/d/0B8-rUzbwVRk0cGtxWmFFVDZkNUE/view?usp=sharing"><font color="blue">GoogleDrive</font></a>. The results used in Fig. 10 is also provided <a href="https://drive.google.com/file/d/0B8-rUzbwVRk0Z0hheDV0aW1DcmM/view?usp=sharing"><font color="blue">here</font></a>. </p>
+
+
+      <!-- Footer placeholder -->
+      <div id="footer"> </div>
+    </div>
+  </body>
+</html>

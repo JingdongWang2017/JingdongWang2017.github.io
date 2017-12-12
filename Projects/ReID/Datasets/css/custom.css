@@ -1,0 +1,40 @@
+p {
+  font-size: 16px;
+}
+
+ul {
+  font-size: 15px;
+}
+
+#example-images {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.jumbotron {
+  background: url("../image/Capture.png");
+  margin-top: 50px;
+  margin-bottom: 20px;
+  min-height: 250px;
+  max-height: 280px;
+  /* -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(20px); */
+}
+
+td {
+  vertical-align: middle;
+}
+
+
+
+
+#footer p {
+  /*font-size: 10px;*/
+}
