@@ -15,7 +15,16 @@
   font.italic {
     font-style: italic;
     }
+    .isDisabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+  .lightfont{font-size: medium; font-weight: normal;}
 </style>
+
 
 <body>
 
@@ -172,23 +181,23 @@ We released the training and testing code and the pretrained model at <A href="h
 </SECTION>
 
 <SECTION id ="Applications" class="sectionwhite">
-<h3> Other applications </h3>
+<h3> Other applications <font class ="lightfont"> (coming soon) </font></h3> 
 <table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
     <tr>
     <td align ="center"><A href="PoseEstimation.html" target="_blank"><img src="images/PoseEstimationExample.jpg" border="12" height="100"></A></td>
-    <td align ="center"><A href="SemanticSegmentation.html" target="_blank"><img src="images/ImageSegmentationExample.jpg" border="12" height="100"></A></A></td>
-    <td align ="center"><A href="FaceAlignment.html" target="_blank"><img src="images/FaceAlignmentExample.jpg" border="12" height="100"></A></td>
-    <td align ="center"><A href="ImageClassification.html" target="_blank"><img src="images/ImageClassificationExample.jpg" border="12" height="100"></A></td>
-    <td align ="center"><A href="ObjectDetection.html" target="_blank"><img src="images/ObjectDetectionExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A class ="isDisabled" href="SemanticSegmentation.html" target="_blank"><img src="images/ImageSegmentationExample.jpg" border="12" height="100"></A></A></td>
+    <td align ="center"><A class ="isDisabled" href="FaceAlignment.html" target="_blank"><img src="images/FaceAlignmentExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A class ="isDisabled" href="ImageClassification.html" target="_blank"><img src="images/ImageClassificationExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A class ="isDisabled" href="ObjectDetection.html" target="_blank"><img src="images/ObjectDetectionExample.jpg" border="12" height="100"></A></td>
     <td rowspan="2"> more ... </td
     </tr>
 
     <tr>
     <td align ="center"><A href="PoseEstimation.html" target="_blank">Pose estimation</A></td>
-    <td align ="center"><A href="SemanticSegmentation.html" target="_blank">Semantic segmentation</A></td>    
-    <td align ="center"><A href="FaceAlignment.html" target="_blank">Face alignment</A></td>
-    <td align ="center"><A href="ImageClassification.html" target="_blank">Image classification</A></td>
-    <td align ="center"><A href="ObjectDetection.html" target="_blank">Object detection</A></td>
+    <td align ="center"><A class ="isDisabled" href="SemanticSegmentation.html" target="_blank">Semantic segmentation</A></td>    
+    <td align ="center"><A class ="isDisabled" href="FaceAlignment.html" target="_blank">Face alignment</A></td>
+    <td align ="center"><A class ="isDisabled" href="ImageClassification.html" target="_blank">Image classification</A></td>
+    <td align ="center"><A class ="isDisabled" href="ObjectDetection.html" target="_blank">Object detection</A></td>
     </tr>
         <TR> <td></td> </TR>
     <TR> <td></td> </TR>
@@ -232,20 +241,7 @@ We released the training and testing code and the pretrained model at <A href="h
 </table>
 </SECTION>
 
-<!--<SECTION id ="References" class="sectionwhite">
-<h3> References</h3></SECTION>
-<SECTION id ="References" class="sectionwhite">
-<table cellpadding=3 cellspacing=0 width="80%" class="sectionwhite" >
-<pre><code>[1] A. Newell, K. Yang, and J. Deng. Stacked hourglass net-works for human pose estimation. ECCV, pages 483–499,2016.
-[2] Y. Chen, Z. Wang, Y. Peng, Z. Zhang, G. Yu, and J. Sun. Cascaded pyramid network for multi-person pose estimation. CoRR,
-    abs/1711.07319, 2017.
-[3] B. Xiao, H. Wu, and Y. Wei. Simple baselines for human pose estimation and tracking. ECCV, pages 472–487, 2018.
-[4] E. Insafutdinov, L. Pishchulin, B. Andres, M. Andriluka, and B. Schiele. Deepercut: A deeper, stronger, and faster multi-person
-    pose estimation model. ECCV, pages 34–50, 2016.
-</code></pre>
-</table>
-</SECTION>-->
-
+ 
 
 
 <div><hr></div>
