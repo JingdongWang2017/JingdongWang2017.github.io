@@ -1,0 +1,223 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=GB2312">
+<meta name="keywords" content="High-Resolution Representation">
+<meta name="description" content="Deep High-Resolution Representation Learning">
+<!--<link href="CSS/bootstrap.min.css" media="all" rel="stylesheet">-->
+<link href="../../CSS/main.css" media="all" rel="stylesheet">
+<title>Deep High-Resolution Representation Learning</title>
+</head>
+
+<style>
+  font.italic {
+    font-style: italic;
+    }
+    .isDisabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+  .lightfont{font-size: medium; font-weight: normal;}
+</style>
+
+
+<body>
+
+
+<section id ="headinformation" class="sectionwhite">
+<table id="tbInformation" width="100%">
+    <tr><td align="center">
+    <h1>High-Resolution Representation Learning for Object Detection </h1>
+    </td></tr>
+    <TR> <td></td> </TR>
+    <TR> <td align="center">Ke Sun &nbsp&nbsp&nbsp Yang Zhao &nbsp&nbsp&nbsp Borui Jiang &nbsp&nbsp&nbsp Tianheng Cheng &nbsp&nbsp&nbsp Bin Xiao
+  &nbsp&nbsp&nbsp Dong Liu &nbsp&nbsp&nbsp Yadong Mu &nbsp&nbsp&nbsp Xinggang Wang &nbsp&nbsp&nbsp Wenyu Liu &nbsp&nbsp&nbsp <A  href="../../index.html" target="_blank">Jingdong Wang</A></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <tr><td align="center">
+    <img src="images/ObjectDetectionResults.jpg" border="12" height="250">
+    </td></tr>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+</SECTION>
+
+
+
+
+
+<SECTION id ="Abstract" class="sectionwhite">
+<h3> Abstract </h3>
+<font size ="normal">
+<table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
+    <tr><td align="left">
+We extend the high-resolution representation (HRNet) [1] by augmenting the high-resolution representation by aggregating the (upsampled) representations from all the parallel convolutions, leading to stronger representations. We build a multi-level representation from the high resolution and apply it to the Faster R-CNN, Mask R-CNN and Cascade R-CNN framework. This proposed approach achieves superior results to existing single-model networks on COCO object detection. 
+</td></tr>
+<tr><td align="left">
+The code and models are publicly available at <A href="https://github.com/HRNet/HRNet-Object-Detection" target="_blank">GitHub</A>.
+    </td></tr>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+</font>
+</SECTION>
+
+
+<SECTION id ="Summary"  class="sectionwhite">
+<h3> Architecture</h3>
+<font size ="normal">
+<table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
+<tr><td align="center">
+</td> </TR>
+<tr><td align="center">
+       <img src="images/hrnetv2p.png" border="12" height="130">
+</td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+<br>
+</font>
+</SECTION>
+
+<!--<SECTION id ="Results" class="sectionwhite">
+<h3> Results</h3></SECTION>
+<SECTION id ="Citation" width="80%" class="sectiongray">
+<table cellpadding=3 cellspacing=0 width="80%" class="sectiongwhite" >
+</table>
+</SECTION>-->
+
+
+<SECTION id ="Paper"  class="sectionwhite">
+<h3> Paper</h3>
+<font size ="normal">
+<table cellpadding=0 cellspacing=0 width="100%" class="sectionwhite">
+<tr><td align="center">
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper001.jpg" style="border:1px solid black" width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper002.jpg" style="border:1px solid black"  width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper003.jpg" style="border:1px solid black"  width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper004.jpg" style="border:1px solid black"  width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper005.jpg" style="border:1px solid black"  width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    <img src="images/ObjectDetection/paper006.jpg" style="border:1px solid black"  width="15.5%"></A>
+    <A href="https://arxiv.org/pdf/1904.04514.pdf" target="_blank">
+    paper</A>
+</td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+</font>
+</SECTION>
+
+
+
+
+
+<SECTION id ="Code"  class="sectionwhite">
+<h3> Code</h3>
+<font size ="normal">
+<table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite">
+<tr><td>
+We released the training and testing code and the pretrained model at <A href="https://github.com/HRNet/HRNet-Object-Detection" target="_blank">GitHub</A> </td></td>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+</font>
+</SECTION>
+
+<SECTION id ="Applications" class="sectionwhite">
+<h3> Other applications <font class ="lightfont"> (coming soon) </font></h3>
+<table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
+    <tr>
+    <td align ="center"><A href="PoseEstimation.html" target="_blank"><img src="images/PoseEstimationExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A class ="isDisabled" href="SemanticSegmentation.html" target="_blank"><img src="images/ImageSegmentationExample.jpg" border="12" height="100"></A></A></td>
+    <td align ="center"><A class ="isDisabled" href="FaceAlignment.html" target="_blank"><img src="images/FaceAlignmentExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A href="ImageClassification.html" target="_blank"><img src="images/ImageClassificationExample.jpg" border="12" height="100"></A></td>
+    <td align ="center"><A href="ObjectDetection.html" target="_blank"><img src="images/ObjectDetectionExample.jpg" border="12" height="100"></A></td>
+    <td rowspan="2"> more ... </td
+    </tr>
+
+    <tr>
+    <td align ="center"><A href="PoseEstimation.html" target="_blank">Pose estimation</A></td>
+    <td align ="center"><A class ="isDisabled" href="SemanticSegmentation.html" target="_blank">Semantic segmentation</A></td>
+    <td align ="center"><A class ="isDisabled" href="FaceAlignment.html" target="_blank">Face alignment</A></td>
+    <td align ="center"><A href="ImageClassification.html" target="_blank">Image classification</A></td>
+    <td align ="center"><A href="ObjectDetection.html" target="_blank">Object detection</A></td>
+    </tr>
+        <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+    <TR> <td></td> </TR>
+</table>
+</SECTION>
+
+<SECTION id ="Citation" class="sectionwhite">
+<h3> Citation</h3></SECTION>
+<SECTION id ="Citation" width="60%" class="sectiongray">
+<table cellpadding=3 cellspacing=0 width="60%" class="sectiongray" >
+<TR><TD>
+<pre><code>@inproceedings{SunXLW19,
+  title={Deep High-Resolution Representation Learning for Human Pose Estimation},
+  author={Ke Sun and Bin Xiao and Dong Liu and Jingdong Wang},
+  booktitle={CVPR},
+  year={2019}
+}
+@article{SunZJCXLMWLW19,
+  title={High-Resolution Representations for Labeling Pixels and Regions},
+  author={Ke Sun and Yang Zhao and Borui Jiang and Tianheng Cheng and Bin Xiao
+  and Dong Liu and Yadong Mu and Xinggang Wang and Wenyu Liu and Jingdong Wang},
+  journal   = {CoRR},
+  volume    = {abs/1904.04514},
+  year={2019}
+}
+</TD></TR>
+</code></pre>
+</table>
+</SECTION>
+
+<SECTION id ="References" class="sectionwhite">
+<h3> References</h3></SECTION>
+<SECTION id ="References" class="sectionwhite">
+<table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
+<TR> <TD class="pubindex"><FONT>[1]&nbsp</FONT></TD>
+<TD STYLE ="VERTICAL-ALIGN: TOP"> Deep High-Resolution Representation Learning for Human Pose Estimation. Ke Sun, Bin Xiao, Dong Liu, and Jingdong Wang. CVPR 2019.</TD></TR>
+
+</table>
+</SECTION>
+
+
+
+
+<div><hr></div>
+
+<tr>
+<td>
+<p class=MsoNormal align=center style='text-align:center'>
+<a href="http://www.easycounter.com/">
+<img src="http://www.easycounter.com/counter.php?welleast" border="0" alt="HTML Hit Counters"></a>
+</p>
+</td>
+</tr>
+</body>
+
+
+</html>
