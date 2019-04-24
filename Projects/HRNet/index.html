@@ -30,7 +30,7 @@
 <section id ="headinformation" class="sectionwhite">
 <table id="tbInformation" width="100%">
     <tr><td align="center">
-    <h1>Deep High-Resolution Representation Learning </h1>
+    <h1>Deep High-Resolution Representation Learning (HRNet) </h1>
     </td></tr>
     <TR> <td></td> </TR>
     <!--<TR> <td align="center">Ke Sun &nbsp&nbsp&nbsp Bin Xiao &nbsp&nbsp&nbsp <A  href="../../index.html" target="_blank">Jingdong Wang</A></td> </TR>-->
@@ -54,7 +54,7 @@
 <font size ="normal">
 <table cellpadding=3 cellspacing=0 width="100%" class="sectionwhite" >
     <tr><td align="left">
-High-resolution representation learning
+<!--High-resolution representation learning
 play an essential role in many vision problems,
 e.g., semantic segmentation,
 and has been attracting more and more attention.
@@ -69,7 +69,19 @@ we propose a high-resolution network (HRNet)
 The HRNet maintains high-resolution representations
 by connecting high-to-low resolution subnetworks in parallel
 and produces strong high-resolution representations
-by repeatedly performing multi-scale fusions across the parallel subnetworks.
+by repeatedly performing multi-scale fusions across the parallel subnetworks.-->
+
+Classification networks have been dominant in visual recognition, from image-level classification to region-level classification (object detection) and pixel-level classification (semantic segmentation, human pose estimation, and facial landmark detection). We argue that the classification network, formed by connecting high-to-low convolutions in series, is not a good choice for region-level and pixel-level classification because it only leads to rich low-resolution representations or poor high-resolution representations obtained with upsampling processes.
+</td></tr>
+<tr><td align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We propose a high-resolution network (HRNet). The HRNet maintains high-resolution representations by connecting high-to-low resolution convolutions in parallel and strengthens high-resolution representations by repeatedly performing multi-scale fusions across parallel convolutions. We demonstrate the effectives on pixel-level classification, region-level classification, and image-level classification.
+</td></tr>
+<tr><td align="left">
+<font color="blue">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The HRNet turns out to be a strong repalcement of classification networks (e.g., ResNets, VGGNets) for visual recognition. We believe that the HRNet will become the new standard backbone.
+</font>
     </td></tr>
 </table>
 </font>
