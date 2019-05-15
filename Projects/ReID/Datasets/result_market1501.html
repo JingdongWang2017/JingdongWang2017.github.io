@@ -45,7 +45,8 @@
             } else {
               currentArr.push($tr);
               $(colToSort).each(function (_, index) {
-                var value = parseFloat($('td', $tr).eq(index - 1).text().trim()) || -Infinity;
+                if (index < 2) return;
+                var value = parseFloat($('td', $tr).eq(index - 2).text().trim()) || -Infinity;
                 if (value > currentObj[index]) currentObj[index] = value;
               })
               remains--;
