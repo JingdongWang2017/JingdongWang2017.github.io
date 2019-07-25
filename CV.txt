@@ -1,8 +1,0 @@
-Jingdong Wang is a Senior Researcher with the Visual Computing Group, Microsoft Research, Beijing, China. His areas of current interest include efficient CNN architecture design, person re-identification, human pose estimation, semantic segmentation, large-scale indexing, and salient object detection. He has authored one book and 100+ papers in top conferences and prestigious international journals in computer vision, multimedia, and machine learning. His paper was selected into the Best Paper Finalist at the ACM MM 2015. He has shipped a dozen of technologies to Microsoft products, including Bing search, Cognitive service, and XiaoIce Chatbot. Dr. Wang is an Associate Editor of IEEE TPAMI, IEEE TCSVT, and IEEE TMM. He was an Area Chair or a Senior Program Committee Member of top conferences, such as CVPR, ICCV, ECCV, AAAI, IJCAI, and ACM Multimedia. He is a Fellow of the IAPR.
-
-
-
-
-微软亚洲研究院视觉计算组资深研究员。研究兴趣包括计算机视觉、多媒体以及机器学习。目前他研究的问题包括高效神经网络结构的设计、行人再识别以及多媒体搜索等。他曾担任过计算机视觉和人工智能会议的领域主席和高级程序委员会委员，比如 CVPR、ICCV、ECCV、AAAI、IJCAI、ACMMM 等。他也是 IEEE 汇刊 IEEE Transactions on Patten Analysis and Machine Intelligence, IEEE Transactions on Circuits and Systems for Video Technology 和 IEEE Transactions on Multimedia 的编委会成员。他是国际模式识别学会的会士。 王博士 在视觉、机器学习以及多媒体领域里发表了论文 100 余篇，个人专著一本。他的研究成果 10 多次转化到微软的关键产品和服务中。
-
-
