@@ -1,0 +1,20 @@
+HRNet + SE:
+https://github.com/shijianjian/HRNet_Keras
+
+HRNet + YOLO + FlowNet:
+https://github.com/stefanopini/simple-HRNet
+https://github.com/lxy5513/hrnet
+
+Style transfer:
+https://github.com/limingcv/Photorealistic-Style-Transfer
+
+
+
+Awsome semantic segmentation:
+https://github.com/mrgloom/awesome-semantic-segmentation
+
+Human pose estimation
+https://github.com/topics/human-pose-estimation
+
+https://forums.fast.ai/t/hrnet-new-sota-architecture/51545
+https://www.reddit.com/r/computervision/comments/cksfse/hrnet_the_most_exciting_and_powerful_new_vision/
