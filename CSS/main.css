@@ -8,9 +8,11 @@ html {
 body {
  	margin: 10px auto; 
  padding: 2px; 50px; 30px; 
- text-align: left; color: rgb(64, 64, 64); 
+ text-align: left; 
+	color: rgb(64, 64, 64); 
  font-family: helvetica, ariel, "sans serif"; 
  max-width: 960px; background-color: rgb(255, 255, 255);
+	line-height: 1.65; 
  }
 
 
@@ -18,13 +20,14 @@ table {
 	background-color: rgb(255, 255, 255);
 }
 a {
-	color: rgb(31, 130, 169); cursor: pointer;
+	> color: rgb(31, 130, 169); cursor: pointer;
+	color: rgb(64, 64, 64); cursor: pointer;
 }
 a:link {
-	color: rgb(31, 130, 169); cursor: pointer;
+	color: rgb(64, 64, 64); cursor: pointer;
 }
 a:visited {
-	color: rgb(31, 130, 169); cursor: pointer;
+	color: rgb(64, 64, 64); cursor: pointer;
 }
 a:hover {
 	background: inherit; color: rgb(0, 102, 153); text-decoration: underline;
