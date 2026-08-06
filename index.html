@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Jingdong Wang, computer vision, deep learning, HRNet, diffusion models, AI">
+  <meta name="description" content="Academic homepage of Jingdong Wang, Fellow of CAE, IEEE and IAPR">
+  <title>Jingdong Wang · Academic Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      background: #f7f9fc;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.12);
+      padding: 2.5rem 2.5rem 2rem;
+    }
+
+    /* header / intro */
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 2px solid #eef2f7;
+    }
+
+    .profile-text {
+      flex: 1 1 300px;
+    }
+
+    .profile-text h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+      color: #0b1a2e;
+    }
+
+    .profile-text h1 small {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #2c4a6e;
+      margin-left: 0.5rem;
+      font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+    }
+
+    .title-tag {
+      font-size: 1rem;
+      font-weight: 450;
+      color: #1f4a7a;
+      background: #e8f0fe;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .profile-links a {
+      color: #1a5a8c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted transparent;
+      transition: border 0.15s;
+    }
+
+    .profile-links a:hover {
+      border-bottom-color: #1a5a8c;
+    }
+
+    .profile-avatar {
+      flex: 0 0 180px;
+      text-align: right;
+    }
+
+    .profile-avatar img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(0, 40, 80, 0.10);
+      background: #eef2f7;
+      transition: transform 0.2s ease;
+    }
+
+    .profile-avatar img:hover {
+      transform: scale(1.02);
+    }
+
+    /* section common */
+    section {
+      margin-top: 2.4rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0b1a2e;
+      border-left: 6px solid #1f7a9c;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-card {
+      background: #fafcff;
+      border-radius: 24px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.01), 0 4px 12px rgba(0, 30, 60, 0.04);
+    }
+
+    .biography p {
+      margin-bottom: 0.9rem;
+    }
+
+    .biography strong {
+      color: #0f3b5e;
+    }
+
+    .biography a {
+      color: #1a6b9a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b6d2e8;
+    }
+
+    .biography a:hover {
+      border-bottom: 1px solid #1a6b9a;
+    }
+
+    .news-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .news-list li {
+      display: flex;
+      gap: 0.4rem 1rem;
+      padding: 0.9rem 0.4rem;
+      border-bottom: 1px solid #edf2f9;
+      align-items: baseline;
+    }
+
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+
+    .news-num {
+      font-weight: 500;
+      color: #496e92;
+      min-width: 2.8rem;
+      font-size: 0.9rem;
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-content .highlight {
+      color: #0f5180;
+      font-weight: 500;
+    }
+
+    .news-content a {
+      color: #1a6b9a;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px dotted #b6d2e8;
+      margin: 0 0.1rem;
+    }
+
+    .news-content a:hover {
+      border-bottom: 1px solid #1a6b9a;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dce6f0;
+      color: #1f4170;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.65rem;
+      border-radius: 30px;
+      letter-spacing: 0.2px;
+    }
+
+    .badge-blue {
+      background: #d6e7ff;
+      color: #004a8a;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e4ebf3;
+      display: flex;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #5e748b;
+    }
+
+    .footer-note img {
+      vertical-align: middle;
+      border-radius: 4px;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .container {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-avatar {
+        text-align: left;
+        margin-top: 0.8rem;
+        flex-basis: auto;
+      }
+
+      .profile-avatar img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .profile-text h1 {
+        font-size: 2rem;
+      }
+
+      .profile-text h1 small {
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .section-card {
+        padding: 1rem 1.2rem;
+      }
+
+      .news-list li {
+        flex-wrap: wrap;
+        padding: 0.7rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== HEADER ========== -->
+  <header class="profile-header">
+    <div class="profile-text">
+      <h1>
+        Jingdong Wang
+        <small>王井东</small>
+      </h1>
+      <div class="title-tag">Fellow of CAE, IEEE &amp; IAPR · ACM Distinguished Member</div>
+      <div class="profile-links">
+        <a href="CV_Jingdong_Wang.pdf" target="_blank">📄 CV</a>
+        <a href="http://scholar.google.com/citations?user=z5SPCmgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://dblp.uni-trier.de/pid/49/3441.html" target="_blank">DBLP</a>
+        <a href="https://orcid.org/0000-0002-4888-4445" target="_blank">ORCID</a>
+        <a href="mailto:wangjingdong@outlook.com">✉️ Email</a>
+        <a href="https://jingdongwang2017.github.io/index_cn.html" target="_blank">中文主页</a>
+      </div>
+    </div>
+    <div class="profile-avatar">
+      <img src="images/Jingdong_small.png" alt="Jingdong Wang portrait">
+    </div>
+  </header>
+
+  <!-- ========== BIOGRAPHY ========== -->
+  <section class="biography">
+    <h3>Biography</h3>
+    <div class="section-card">
+      <p>
+        I am a Fellow of CAE, IEEE, IAPR, and AAIA, and an ACM Distinguished Member. 
+        Prior to joining Baidu, I was a Senior Principal Researcher at Microsoft Research Asia.
+      </p>
+      <p>
+        My current research interests lie in <strong>world models</strong>, <strong>multimodal understanding and generation</strong>, 
+        and <strong>diffusion models</strong>. My work spans neural architecture design, semantic segmentation, 
+        and large‑scale vector similarity search.
+      </p>
+      <p>
+        I am best known for several widely adopted open‑source technologies and foundational algorithms: 
+        <a href="https://arxiv.org/pdf/1908.07919.pdf" target="_blank">HRNet</a> (High‑Resolution Network), 
+        <a href="https://arxiv.org/pdf/1909.11065.pdf" target="_blank">OCRNet</a>, 
+        and <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2012/08/TechReport-1.pdf?msockid=047497bebcea623338cf8037bdb263ca" target="_blank">NGS</a>/<a href="https://github.com/Microsoft/SPTAG" target="_blank">SPTAG</a> 
+        — a production‑ready graph‑based vector search system deployed at the hundred‑billion‑data scale.
+      </p>
+      <p>
+        More recently, I have contributed extensively to modern generative AI and self-supervised representation learning.
+        My recent innovations include <a href="https://openreview.net/pdf?id=ds5w2xth93" target="_blank">SRA</a> 
+        and <a href="https://arxiv.org/pdf/2512.19311" target="_blank">MixFlow</a> for diffusion training, 
+        the Hallo series for human video generation, and 
+        <a href="https://arxiv.org/abs/2202.03026" target="_blank">CAE</a> for self-supervised visual representation learning. 
+        The core principle of SRA is extended by Self-Flow, the key training technique for the FLUX 3 generative model.
+      </p>
+      <p>
+        I served as Program Chair of ICCV 2025. I frequently serve as a (Senior) Area Chair for major conferences 
+        including CVPR, ICCV, ECCV, NeurIPS, ICML, ICLR, ACM MM, IJCAI, and AAAI. I serve as an Associate Editor for 
+        IEEE TPAMI, IJCV, and ACM TOMM, and previously served for IEEE TCSVT and IEEE TMM.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== RECENT NEWS (full descriptions retained) ========== -->
+  <section>
+    <h3>Recent news</h3>
+    <div class="section-card">
+      <ul class="news-list">
+        <!-- 36 -->
+        <li>
+          <span class="news-num">36.</span>
+          <span class="news-content">
+            <span class="highlight">SRA: Self-Representation Alignment for Diffusion Transformers</span>
+            <a href="https://openreview.net/pdf?id=ds5w2xth93" target="_blank">[pdf]</a>
+            <a href="https://github.com/vvvvvjdy/SRA" target="_blank">[code]</a>
+            The core principle is extended by Self-Flow, the key training technique for the FLUX 3 generative model.
+          </span>
+        </li>
+        <!-- 35 -->
+        <li>
+          <span class="news-num">35.</span>
+          <span class="news-content">
+            <span class="highlight">MixFlow Training: Alleviating Exposure Bias with Slowed Interpolation Mixture</span>
+            <a href="https://mixflowgen.github.io/" target="_blank">[project page]</a>
+            <a href="https://arxiv.org/pdf/2512.19311" target="_blank">[pdf]</a>
+            <a href="https://github.com/fudan-generative-vision/MixFlow" target="_blank">[code]</a>
+            SoTA results, outperform RAE, REPA, SiT and DiT for class-conditional image generation, improve the T2I performance, 12/2025.
+          </span>
+        </li>
+        <!-- 34 -->
+        <li>
+          <span class="news-num">34.</span>
+          <span class="news-content">
+            Elected as Fellow of CAE 2024, 
+            <a href="https://www.cae-acg.ca/wp-content/uploads/2024/05/2024-New-Fellows-Media-Release-EN-1.pdf" target="_blank">link</a>, 5/6/2024.
+          </span>
+        </li>
+        <!-- 33 -->
+        <li>
+          <span class="news-num">33.</span>
+          <span class="news-content">
+            Will be a Program Chair for ICCV 2025, 03/2024.
+          </span>
+        </li>
+        <!-- 32 -->
+        <li>
+          <span class="news-num">32.</span>
+          <span class="news-content">
+            <span class="highlight">Group DETR: Fast DETR Training with Group-Wise One-to-Many Assignment.</span>
+            <a href="https://arxiv.org/abs/2207.13085" target="_blank">[pdf]</a>
+            <a href="https://github.com/Atten4Vis/" target="_blank">[code]</a>
+            Accepted by ICCV, 07/2023
+          </span>
+        </li>
+        <!-- 31 -->
+        <li>
+          <span class="news-num">31.</span>
+          <span class="news-content">
+            <span class="highlight">Context Autoencoder for Self-Supervised Representation Learning.</span>
+            <a href="https://rdcu.be/dkCC4" target="_blank">[IJCV]</a>
+            <a href="https://arxiv.org/abs/2202.03026" target="_blank">[pdf]</a>
+            <a href="https://github.com/Atten4Vis/" target="_blank">[code]</a>
+            Superior over MAE and BEiT, 07/2022. Accepted by IJCV, 07/2023
+          </span>
+        </li>
+        <!-- 30 -->
+        <li>
+          <span class="news-num">30.</span>
+          <span class="news-content">
+            <span class="highlight">Understanding Self-Supervised Pretraining with Part-Aware Representation Learning.</span>
+            <a href="https://openreview.net/pdf?id=HP7Qpui5YE" target="_blank">[pdf]</a>
+            <a href="https://github.com/Atten4Vis/" target="_blank">[code]</a>
+            Accepted by TMLR, 07/2023
+          </span>
+        </li>
+        <!-- 29 -->
+        <li>
+          <span class="news-num">29.</span>
+          <span class="news-content">
+            <span class="highlight">Group DETR v2: Strong Object Detector with Encoder-Decoder Pretraining.</span>
+            <a href="https://arxiv.org/abs/2211.03594" target="_blank">[pdf]</a>
+            Group DETR v2 achieves 64.5 mAP on COCO test-dev, and establishes a new SoTA on 
+            <a href="https://paperswithcode.com/sota/object-detection-on-coco">the COCO leaderboard</a>. 11/8/2022
+          </span>
+        </li>
+        <!-- 28 -->
+        <li>
+          <span class="news-num">28.</span>
+          <span class="news-content">
+            <span class="highlight">Transformer does not outperform CNN: On the Connection between Local Attention and Dynamic Depth-wise Convolution.</span>
+            <a href="https://arxiv.org/abs/2106.04263" target="_blank">[pdf]</a>
+            <a href="https://github.com/Atten4Vis/DemystifyLocalViT" target="_blank">[code].</a>
+            ICLR 2022 spotlight. 03/2022
+          </span>
+        </li>
+        <!-- 27 -->
+        <li>
+          <span class="news-num">27.</span>
+          <span class="news-content">
+            People of ACM interview: <a href="https://www.acm.org/articles/people-of-acm/2021/jingdong-wang" target="_blank">URL</a> 12/2021.
+          </span>
+        </li>
+        <!-- 26 -->
+        <li>
+          <span class="news-num">26.</span>
+          <span class="news-content">
+            Elected as Fellow of IEEE, for his contributions to visual content understanding and retrieval, 11/2021.
+          </span>
+        </li>
+        <!-- 25 -->
+        <li>
+          <span class="news-num">25.</span>
+          <span class="news-content">
+            <span class="highlight">Code released for our NeurIPS 2021 paper, HRFormer: High-Resolution Transformer for Dense Prediction.</span>
+            <a href="https://arxiv.org/pdf/2110.09408.pdf" target="_blank">[pdf]</a>
+            <a href="https://github.com/HRNet/HRFormer" target="_blank">code</a>. 09/2021
+          </span>
+        </li>
+        <!-- 24 -->
+        <li>
+          <span class="news-num">24.</span>
+          <span class="news-content">
+            <span class="highlight">Code released for our NeurIPS 2021 paper, SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search.</span>
+            <a href="http://arxiv.org/pdf/2111.08566.pdf" target="_blank">[pdf]</a>
+            <a href="https://github.com/microsoft/SPTAG" target="_blank">code</a>. 09/2021
+          </span>
+        </li>
+        <!-- 23 -->
+        <li>
+          <span class="news-num">23.</span>
+          <span class="news-content">
+            <span class="highlight">Code released for our ICCV 2021 paper, Conditional DETR for Fast Training Convergence.</span>
+            <a href="https://arxiv.org/abs/2108.06152" target="_blank">[pdf]</a>
+            <a href="https://github.com/Atten4Vis/ConditionalDETR" target="_blank">code</a>. 8/16/2021
+          </span>
+        </li>
+        <!-- 22 -->
+        <li>
+          <span class="news-num">22.</span>
+          <span class="news-content">
+            <span class="highlight">Local Transformer attention is equivalent to inhomogeneous dynamic depth-wise convolution:</span>
+            <a href="Pubs/Demystify_Local_Attention.pdf" target="_blank">Demystifying local attention.</a> 7/2021
+          </span>
+        </li>
+        <!-- 21 -->
+        <li>
+          <span class="news-num">21.</span>
+          <span class="news-content">
+            <span class="highlight">Welcome to the large scale approximate nearest search challenge at NeurIPS 2021:</span>
+            <a href="http://big-ann-benchmarks.com/index.html" target="_blank">Big ANN Benchmark.</a> 5/2021
+          </span>
+        </li>
+        <!-- 20 -->
+        <li>
+          <span class="news-num">20.</span>
+          <span class="news-content">
+            HRNet is shipped to <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/whats-new?tabs=csharp#may-2021" target="_blank">Form Recognizer</a>
+            for Table Recognition. 5/2021
+          </span>
+        </li>
+        <!-- 19 -->
+        <li>
+          <span class="news-num">19.</span>
+          <span class="news-content">
+            <span class="highlight">Update object-contextual representation for semantic segmentation (ECCV 2020). We rephrase it as Segmentation Transformer.</span>
+            <a href="https://arxiv.org/pdf/1909.11065.pdf" target="_blank">[pdf]</a>
+            <a href="https://github.com/HRNet/HRNet-Semantic-Segmentation" target="_blank">code</a>. 5/4/2021
+          </span>
+        </li>
+        <!-- 18 -->
+        <li>
+          <span class="news-num">18.</span>
+          <span class="news-content">
+            <span class="highlight">Code released for our CVPR 2021 paper, Lite-HRNet: A Lightweight High-Resolution Network.</span>
+            <a href="https://arxiv.org/pdf/2104.06403" target="_blank">[pdf]</a>
+            <a href="https://github.com/HRNet/Lite-HRNet" target="_blank">code</a>. 4/12/2021
+          </span>
+        </li>
+        <!-- 17 -->
+        <li>
+          <span class="news-num">17.</span>
+          <span class="news-content">
+            <span class="highlight">Code released for our CVPR 2021 paper, Bottom-Up Human Pose Estimation via Disentangled Keypoint Regression.</span>
+            <a href="https://arxiv.org/pdf/2104.02300.pdf" target="_blank">[pdf]</a>
+            <a href="https://github.com/HRNet/DEKR" target="_blank">code</a>. 4/7/2021
+          </span>
+        </li>
+        <!-- 16 (full descriptive text retained) -->
+        <li>
+          <span class="news-num">16.</span>
+          <span class="news-content">
+            <span class="highlight">HRNet: Deep High-Resolution Representation Learning for Visual Recognition.</span> Accepted by TPAMI. 
+            [<a href="Pubs/TPAMI-HRNet.pdf" target="_blank">pdf</a>] or [<a href="https://arxiv.org/pdf/1908.07919.pdf" target="_blank">pdf at arXiv</a>].
+            This is a longer version of <a href="https://arxiv.org/abs/1902.09212" target="_blank">the HRNet paper</a> published in CVPR 2019.
+            HRNet is a stronger backbone, and achieves superior performance on human pose estimation, semantic segmentation, object detection, face alignment, and so on. 
+            Codes are available: 
+            [<a href="https://github.com/leoxiaobin/deep-high-resolution-net.pytorch" target="_blank">HRNet for human pose estimation</a>],
+            [<a href="https://github.com/HRNet" target="_blank">HRNet for segmentation, detection, face alignment</a>]. 3/13/2020
+          </span>
+        </li>
+        <!-- 15 -->
+        <li>
+          <span class="news-num">15.</span>
+          <span class="news-content">
+            HRNet + OCR + SegFix is ranked 1 on cityscapes segmentation. <a href="https://www.cityscapes-dataset.com/benchmarks/" target="_blank">Cityscapes segmentation leaderboard</a> (January 2020).
+            The implementation of HRNet + OCR is available: <a href="https://github.com/HRNet/HRNet-Semantic-Segmentation/tree/HRNet-OCR" target="_blank">code</a>
+          </span>
+        </li>
+        <!-- 14 -->
+        <li>
+          <span class="news-num">14.</span>
+          <span class="news-content">
+            Invited as an area chair of CVPR 2020, ECCV 2020, and IJCAI 2020.
+          </span>
+        </li>
+        <!-- 13 -->
+        <li>
+          <span class="news-num">13.</span>
+          <span class="news-content">
+            HRNet + OCR is ranked 1 on cityscapes segmentation. <a href="https://www.cityscapes-dataset.com/benchmarks/" target="_blank">Cityscapes segmentation leaderboard</a> (July 2019).
+          </span>
+        </li>
+        <!-- 12 -->
+        <li>
+          <span class="news-num">12.</span>
+          <span class="news-content">
+            <span class="highlight">High-Resolution Network (HRNet).</span> A replacement of classification networks for visual recognition.&nbsp;<a href="./Projects/HRNet/index.html" target="_blank">projects page.</a>
+          </span>
+        </li>
+        <!-- 11 -->
+        <li>
+          <span class="news-num">11.</span>
+          <span class="news-content">
+            Fast neighborhood graph-based approximate nearest neighbor search: <a href="https://github.com/Microsoft/SPTAG" target="_blank">code</a>
+            <a href="https://blogs.microsoft.com/ai/bing-vector-search/?utm_source=pre-amp&utm_campaign=81516/" target="_blank">Bing vector search</a>.
+            <a href="https://techcrunch.com/2019/05/15/microsoft-open-sources-a-crucial-algorithm-behind-its-bing-search-services/" target="_blank">TechCrunch</a>.
+          </span>
+        </li>
+        <!-- 10 -->
+        <li>
+          <span class="news-num">10.</span>
+          <span class="news-content">
+            Invited as an area chair of ICCV 2019, and IJCAI 2019.
+          </span>
+        </li>
+        <!-- 9 -->
+        <li>
+          <span class="news-num">9.</span>
+          <span class="news-content">
+            Elected as an ACM Distinguished Member, 11/2018.
+          </span>
+        </li>
+        <!-- 8 -->
+        <li>
+          <span class="news-num">8.</span>
+          <span class="news-content">
+            Gave a keynote talk about approximate nearest neighbor search on 9/29/2018 at JD.com.
+            &nbsp;<a href="./Projects/ANN/ANN.pdf" target="_blank">slides</a>
+          </span>
+        </li>
+        <!-- 7 -->
+        <li>
+          <span class="news-num">7.</span>
+          <span class="news-content">
+            Second place entry, COCO keypoints detection challenge ECCV 2018.
+          </span>
+        </li>
+        <!-- 6 -->
+        <li>
+          <span class="news-num">6.</span>
+          <span class="news-content">
+            Appointed as AE of TPAMI, 09/2018.
+          </span>
+        </li>
+        <!-- 5 -->
+        <li>
+          <span class="news-num">5.</span>
+          <span class="news-content">
+            Elected as Fellow of IAPR 2018.
+          </span>
+        </li>
+        <!-- 4 -->
+        <li>
+          <span class="news-num">4.</span>
+          <span class="news-content">
+            One paper is accepted by ECCV 2018.
+          </span>
+        </li>
+        <!-- 3 -->
+        <li>
+          <span class="news-num">3.</span>
+          <span class="news-content">
+            Two papers are accepted by ACM MM 2018.
+          </span>
+        </li>
+        <!-- 2 -->
+        <li>
+          <span class="news-num">2.</span>
+          <span class="news-content">
+            Three papers are accepted by CVPR 2018.
+          </span>
+        </li>
+        <!-- 1 -->
+        <li>
+          <span class="news-num">1.</span>
+          <span class="news-content">
+            Appointed as AE of TCSVT, 01/2018.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div class="footer-note">
+    <a href="http://www.easycounter.com/">
+      <img src="http://www.easycounter.com/counter.php?welleast" border="0" alt="HTML Hit Counters">
+    </a>
+  </div>
+
+</div>
+<!-- container end -->
+</body>
+</html>

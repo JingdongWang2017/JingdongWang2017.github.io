@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="王井东, Jingdong Wang, 计算机视觉, 深度学习, 人工智能">
+  <meta name="description" content="王井东 (Jingdong Wang) 个人学术主页">
+  <title>王井东 · 个人主页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', 'Microsoft JhengHei', sans-serif;
+      background: #f7f9fc;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.12);
+      padding: 2.5rem 2.5rem 2rem;
+    }
+
+    /* header / intro */
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 2px solid #eef2f7;
+    }
+
+    .profile-text {
+      flex: 1 1 300px;
+    }
+
+    .profile-text h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+      color: #0b1a2e;
+    }
+
+    .profile-text h1 small {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #2c4a6e;
+      margin-left: 0.5rem;
+      font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+    }
+
+    .title-tag {
+      font-size: 1rem;
+      font-weight: 450;
+      color: #1f4a7a;
+      background: #e8f0fe;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .profile-links a {
+      color: #1a5a8c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted transparent;
+      transition: border 0.15s;
+    }
+
+    .profile-links a:hover {
+      border-bottom-color: #1a5a8c;
+    }
+
+    .profile-avatar {
+      flex: 0 0 180px;
+      text-align: right;
+    }
+
+    .profile-avatar img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(0, 40, 80, 0.10);
+      background: #eef2f7;
+      transition: transform 0.2s ease;
+    }
+
+    .profile-avatar img:hover {
+      transform: scale(1.02);
+    }
+
+    /* section common */
+    section {
+      margin-top: 2.4rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0b1a2e;
+      border-left: 6px solid #1f7a9c;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-card {
+      background: #fafcff;
+      border-radius: 24px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.01), 0 4px 12px rgba(0, 30, 60, 0.04);
+    }
+
+    .biography p {
+      margin-bottom: 0.9rem;
+    }
+
+    .biography strong {
+      color: #0f3b5e;
+    }
+
+    .biography a {
+      color: #1a6b9a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b6d2e8;
+    }
+
+    .biography a:hover {
+      border-bottom: 1px solid #1a6b9a;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e4ebf3;
+      display: flex;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #5e748b;
+    }
+
+    .footer-note img {
+      vertical-align: middle;
+      border-radius: 4px;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .container {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-avatar {
+        text-align: left;
+        margin-top: 0.8rem;
+        flex-basis: auto;
+      }
+
+      .profile-avatar img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .profile-text h1 {
+        font-size: 2rem;
+      }
+
+      .profile-text h1 small {
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .section-card {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== HEADER ========== -->
+  <header class="profile-header">
+    <div class="profile-text">
+      <h1>
+        王井东
+        <small>Jingdong Wang</small>
+      </h1>
+      <div class="title-tag">加拿大工程院外籍院士 · IEEE/IAPR 会士 · ACM 杰出会员</div>
+      <div class="profile-links">
+        <a href="CV_Jingdong_Wang.pdf" target="_blank">📄 CV</a>
+        <a href="http://scholar.google.com/citations?user=z5SPCmgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://dblp.uni-trier.de/pid/49/3441.html" target="_blank">DBLP</a>
+        <a href="https://orcid.org/0000-0002-4888-4445" target="_blank">ORCID</a>
+        <a href="mailto:wangjingdong@outlook.com">✉️ Email</a>
+        <a href="https://jingdongwang2017.github.io/index.html" target="_blank">English</a>
+      </div>
+    </div>
+    <div class="profile-avatar">
+      <img src="images/Jingdong_small.png" alt="王井东 肖像">
+    </div>
+  </header>
+
+  <!-- ========== BIOGRAPHY ========== -->
+  <!-- 中文介绍与英文版信息完全对应，保留所有原文细节 -->
+  <section class="biography">
+    <h3>个人简介</h3>
+    <div class="section-card">
+      <p>
+        王井东博士，加拿大工程院外籍院士、国际电气电子工程师学会会士、国际模式识别学会会士、国际计算机协会杰出会员。
+        加入百度之前，2007年至2021年在微软亚洲研究院工作，历任副研究员、研究员、高级研究员、资深首席研究员。
+      </p>
+      <p>
+        目前研究领域包括 <strong>世界模型</strong>、<strong>多模态理解和生成</strong> 以及 <strong>扩散模型</strong> 等。
+        过去的研究领域为计算机视觉、深度学习和多媒体搜索。代表工作包括：第一个统一的视觉识别网络 – 高分辨率网络 
+        <a href="https://arxiv.org/pdf/1908.07919.pdf" target="_blank">HRNet</a> (High‑Resolution Network)，
+        基于 transformer query 的图像语义分割网络 
+        <a href="https://arxiv.org/pdf/1909.11065.pdf" target="_blank">OCRNet</a> (Object‑Contextual Representations)，
+        第一个有监督的区域特征融合的显著性检测算法（DRFI），以及
+        第一个基于近邻图的可实用的千亿量级的向量搜索算法（<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2012/08/TechReport-1.pdf?msockid=047497bebcea623338cf8037bdb263ca" target="_blank">NGS</a> 与 <a href="https://github.com/Microsoft/SPTAG" target="_blank">SPTAG</a>）—— 
+        这是首个在百亿数据规模上部署的、面向真实大规模相似搜索的图索引向量搜索系统。
+      </p>
+      <p>
+        近期在生成式 AI 和自监督表示学习方面持续贡献，包括 
+        <a href="https://openreview.net/pdf?id=ds5w2xth93" target="_blank">SRA</a> (Self‑Representation Alignment) 
+        和 <a href="https://arxiv.org/pdf/2512.19311" target="_blank">MixFlow</a> 扩散模型训练技术，
+        Hallo 系列人像视频生成，以及 <a href="https://arxiv.org/abs/2202.03026" target="_blank">CAE</a> 自监督视觉表示学习。SRA 的核心思想被 Self‑Flow 扩展，成为 FLUX 3 生成模型的关键训练技术。
+      </p>
+      <p>
+        王井东博士担任 <strong>ICCV 2025</strong> 程序委员会主席，担任或曾担任 IEEE TPAMI、IJCV、ACM TOMM、IEEE TMM 和 IEEE TCSVT 的编委，
+        并担任或曾担任视觉、多媒体和人工智能等方向顶会的（资深）领域主席， 包括 CVPR、ICCV、ECCV、NeurIPS、ICML、ICLR、ACM MM、IJCAI 和 AAAI 等。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div class="footer-note">
+    <a href="http://www.easycounter.com/">
+      <img src="http://www.easycounter.com/counter.php?welleast" border="0" alt="HTML Hit Counters">
+    </a>
+  </div>
+
+</div>
+<!-- container end -->
+</body>
+</html>
