@@ -353,6 +353,20 @@
             <a href="https://openreview.net/pdf?id=ds5w2xth93" target="_blank">[pdf]</a>
             <a href="https://github.com/vvvvvjdy/SRA" target="_blank">[code]</a>
             The core principle is extended by Self-Flow, the key training technique for the FLUX 3 generative model.
+            <details open>
+              <summary style="cursor: pointer">Advantage over REPA (feedback to one reviewer)</summary>
+              <p>Our approach does not rely on 
+                an external pretrained encoder, and can be applied to cases where no good external pretrained 
+                encoders are available. The advantage is even more significant for open domain cases 
+                where the domain is not covered by existing pretrained encoders, e.g., text-to-video generation, 
+                where currently there is no well-pretrained strong encoder for open-domain videos 
+                (there is some video pretrained model, e.g., VideoMAE, which is still not strong enough 
+                for open-domain video encoder, compared to DINO-v2 for image encoder). 
+                A possible solution for using REPA is to pretrain an encoder for these cases, 
+                which is an additional task, challenging and not easily and readily solved, 
+                needing a large extra cost.
+              </p> 
+            </details>
           </span>
         </li>
         <!-- 35 -->
